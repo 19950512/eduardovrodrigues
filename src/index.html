@@ -3,8 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>Dr. Eduardo Vanin Rodrigues - Advogado Criminalista</title>
+        <meta name="description" content="Advogado Criminalista formado pela Faculdade da Associação Brasiliense de Educação - FABE e pós-graduando em Direito Penal/Processo Penal e Direito Penal e Criminologia pela UNINTER.">
         <link href="/css/font/stylesheet.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
         <style>
                 
                 * {
@@ -20,32 +24,57 @@
                 h1 {
                     font-size: 2rem;
                     font-weight: 200;
-                    color: #000;
+                    color: #ffffff;
                     margin-bottom: 20px;
                     text-transform: uppercase;
                 }
 
+                html{
+                    scroll-behavior: smooth;
+                }
 
                 body {
                     width: 100%;
                     background-color: #bdbdbd;
-                    font-family: 'Agrandir Grand';
+                    font-family: "Montserrat", sans-serif;
+                    font-optical-sizing: auto;
+                    font-weight: 300;
                     font-style: normal;
-                    font-size: 16px;
-                    font-weight: 400;
                 }
     
                 header {
                     width: 100%;
-                    background-color: white;
+                    background-color: rgba(255, 255,255, 0.5);
+
+                    background-image: url('/img/eduardo.jpg');
+                    min-height: 100vh;
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
                 }
 
                 header div {
                     margin: auto;
                     display: grid;
-                    grid-template-columns: .5fr 1.5fr;
+                    grid-template-columns: 1fr 1.5fr;
                     align-items: start;
                     max-width: 85rem;
+                    color: white;
+                    height: 330px;
+                    width: 100%;
+                }
+
+                header button {
+                    /* Botão Whastapp */
+                    background-color: #25d366;
+                    color: rgb(36, 36, 36);
+                    border: none;
+                    border-radius: 5px;
+                    padding: 10px 20px;
+                    font-size: 14px;
+                    font-weight: 500;
+                    cursor: pointer;
+
                 }
             
                 nav {
@@ -63,15 +92,16 @@
     
                 nav ul li {
                     list-style: none;
+                    font-weight: 500;
                 }
     
                 nav ul li a {
                     text-decoration: none;
-                    color: #202020ee;
+                    color: white;
                 }
     
                 nav ul li a:hover {
-                    color: black;
+                    font-weight: 600;
                 }
 
 
@@ -79,11 +109,6 @@
 
 
                 /* primeira sessão H1 */
-                section {
-                    padding: 0 50px;
-                    background-color: #c3c3c3;
-                }
-
                 section div {
                     display: flex;
                     flex-direction: column;
@@ -91,15 +116,12 @@
                     align-items: flex-start;
                     max-width: 85rem;
                     margin: auto;
-                    height: 50vh;
-                    min-height: 400px;
+                    height: 40vh;
+                    min-height: 380px;
                 }
-
                 section div p:last-child {
                     font-size: 14px;
                 }
-
-
 
                 /* Reset do H1 para os demais sections*/
                 section {
@@ -110,85 +132,84 @@
                 }
 
 
-
                 /* Sessao nossos serviços*/
                 section:nth-child(3) {
                     background-color: #fff;
+                    min-height: 100vh;
                 }
                 /* Sessão Sobre*/
                 section:nth-child(4) {
                     background-color: #9b9b9b;
-                }
-                /* Sessão Depoimentos*/
-                section:nth-child(5) {
-                    background-color: rgb(235, 235, 235);
-                }
-                section:nth-child(5) ul {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: start;
-                    align-items: center;
-                    max-width: 85rem;
-                    margin: auto;
-                    gap: 2rem;
-                    height: 50vh;
-                    min-height: 400px;
-                }
+                    min-height: 100vh;
 
-
-                section:nth-child(5) ul li {
-                    background-color: rgb(255, 255, 255);
-                    padding: 1rem;
-                    border-radius: 1rem;
-                    text-align: center;
-                    position: relative;
+                    background-image: url('/img/eduardo-header.png'), url('/img/sobre-background.jpg');
+                    background-size: contain, cover;
+                    background-position: center right, center;
+                    background-repeat: no-repeat;
+                    background-attachment: fixed;
                 }
-                section:nth-child(5) ul li img:first-child {
-                    position: absolute;
-                    top: -23%;
-                    left: 50%;
-                    transform: translate(-60%, 0);
-                    border-radius: 50%;
-                    margin: 0 20px;
-                    text-align: none;
+                section:nth-child(4) * {
+                    color: white;
                 }
-                section:nth-child(5) ul li img:nth-child(n + 2) {
-                    width: 30px;
-                    height: 30px;
-                }
-
-                section:nth-child(5) ul li cite {
-                    font-weight: 600;
-                    display: block;
-                    font-style: normal;
-                }
-
 
                 /* Sessão Contato*/
                 section:nth-child(6) {
                     background-color: #9b9b9b;
+                    min-height: 100vh;
                 }
 
                 /* Footer */
                 footer {
                     width: 100%;
-                    background-color: #202020ee;
+                    background-color: white;
+                }
+                footer section {
+                    margin: auto;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-around;
+                    align-items: top;
+                    gap: 10px;
+                    max-width: 85rem;
+                    padding-bottom: 0;
                 }
 
-                footer div {
+                footer section nav {
+                    height: auto;
+                }
+                footer section nav ul {
+                    flex-direction: column;
+                    align-items: top;
+                    direction: ltr;
+                    gap: 30px;
+                }
+                footer section nav ul li {
+                    display: block;
+                    width: 100%;
+                }
+                footer section nav ul li a{
+                    color: black;
+                }
+
+                footer hr {
+                    width: 50%;
                     margin: auto;
-                    display: grid;
-                    grid-template-columns: .5fr 1.5fr;
-                    align-items: start;
-                    max-width: 85rem;
                 }
-                footer div p {
-                    color: white;
-                    font-size: 14px;
-                    font-weight: 200;
+
+                footer > p:last-child{
+                    padding: 30px;
                     text-align: center;
-                    margin: 20px 0;
+                    user-select: none;
                 }
+
+
+                footer > p:last-child a {
+                    filter: grayscale(.5);
+                }
+                footer > p:last-child a:hover {
+                    filter: grayscale(0);
+                }
+
         </style>
     </head>
     <body>
@@ -197,97 +218,123 @@
                 <img src="/img/logo-small-branca.png" height="50px">
                 <nav>
                     <ul>
-                        <li><a href="#">Início</a></li>
-                        <li><a href="#">Serviços</a></li>
-                        <li><a href="#">Sobre</a></li>
-                        <li><a href="#">Depoimentos</a></li>
-                        <li><a href="#">Contato</a></li>
+                        <li><a href="/">Início</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#contato">Contato</a></li>
                     </ul>
                 </nav>
             </div>
-        </header>
-        <section>
             <div>
-                <h1>Advocacia especializada em contratos,<br /> documentos e defesa criminalista <br />em geral</h1>
-                <br />
-                <p>50% das condenações em processos judiciais se dão<br /> por falta de documentação.</p>
-                <p><b>Você não precisa fazer parte desta estatística</b></p>
-                <br />
+                <h1>Dr. Eduardo Vanin Rodrigues - Advogado Criminalista Especializado em Defesa Humanizada</h1>
+                <br /> 
+                <p>Dr. Eduardo Vanin Rodrigues: Advogado Criminalista especializado em defesa humanizada e detalhista, atua em todo o Brasil, garantindo excelência jurídica em casos criminais.</p>
+                <br /> 
+                <br /> 
+                <br /> 
+                <br /> 
                 <p><button>Entre em contato</button></p>
-                <br />
+                <br /> 
+                <br /> 
+                <br /> 
                 <p>Contato via Whatsapp ou E-mail · 100% Online</p>
             </div>
-        </section>
-        <section>
+        </header>
+        <section id="servicos">
             <div>
-                <h2>Nossos Serviços</h2>
+                <h2>Especialistas em<br />
+                    DIREITO PENAL</h2>
                 <br />
 
             </div>
         </section>
-        <section>
+        <section id="sobre">
             <div>
-                <h2>Sobre</h2>
+                <h2>Dr. Eduardo Vanin Rodrigues - Advogado Criminalista</h2>
+                <br /><br />
+                <p>Advogado Criminalista formado pela <strong>Faculdade da Associação Brasiliense de Educação - FABE</strong><br /> e pós-graduando em <strong>Direito Penal/Processo Penal e Direito Penal e Criminologia</strong> pela <strong>UNINTER</strong>.<br /> Experiência adquirida durante a graduação inclui atuação no cartório da Segunda Vara Judicial,<br /> gabinete da Primeira Vara Judicial e Delegacia de Polícia de Marau/RS (setor de investigação).</p>
                 <br />
-
+                <p>Atua exclusivamente na área criminal, proporcionando uma defesa humanizada e detalhista.<br /> Desde prisões em flagrante até a execução penal, seu compromisso é garantir uma atuação de excelência.<br /> Atendimento em todo o Brasil.</p>
             </div>
         </section>
-        <section>
-            <div>
-                <h2>Depoimentos de Clientes</h2>
-                <br />
-                <p>Confira as experiências dos clientes do Dr. Eduardo Vanin Rodrigues na defesa criminal. <br />Depoimentos reais destacando a excelência e sucesso de sua atuação.<br />Leia agora!</p>
-                <ul>
-                    <li>
-                        <img src="/img/depoimentos/matheus-maydana.jpg" alt="Depoimento de Matheus Maydana">
-                        <br/>
-                        <br/>
-                        <br/>
-                        <blockquote>
-                            <cite>Matheus Maydana</cite>
-                            <br />
-                            <img src="/img/depoimentos/star-yellow.png" alt="Star Yellow" height="30px" width="30px">
-                            <img src="/img/depoimentos/star-yellow.png" alt="Star Yellow" height="30px" width="30px">
-                            <img src="/img/depoimentos/star-yellow.png" alt="Star Yellow" height="30px" width="30px">
-                            <img src="/img/depoimentos/star-yellow.png" alt="Star Yellow" height="30px" width="30px">
-                            <img src="/img/depoimentos/star-yellow.png" alt="Star Yellow" height="30px" width="30px">
-                            <br />
-                            <br />
-                            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/>Sed vitae nisi eget nunc ultricies aliquam.<br/>Pellentesque habitant morbi tristique senectus et <br/>netus et malesuada fames ac turpis egestas."</p>
-                        </blockquote>
-                    </li>
-                    <li>
-                        <img src="/img/depoimentos/rita-maydana.jpg" alt="Depoimento de Rita Maydana">
-                        <br/>
-                        <br/>
-                        <br/>
-                        <blockquote>
-                            <cite>Rita Maydana</cite>
-                            <br />
-                            <img src="/img/depoimentos/star-yellow.png" alt="Star Yellow" height="30px" width="30px">
-                            <img src="/img/depoimentos/star-yellow.png" alt="Star Yellow" height="30px" width="30px">
-                            <img src="/img/depoimentos/star-yellow.png" alt="Star Yellow" height="30px" width="30px">
-                            <img src="/img/depoimentos/star-yellow.png" alt="Star Yellow" height="30px" width="30px">
-                            <img src="/img/depoimentos/star-yellow.png" alt="Star Yellow" height="30px" width="30px">
-                            <br />
-                            <br />
-                            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/>Sed vitae nisi eget nunc ultricies aliquam.<br/>Pellentesque habitant morbi tristique senectus et <br/>netus et malesuada fames ac turpis egestas."</p>
-                        </blockquote>
-                    </li>
-                </ul>
-            </div>
-        </section>
-        <section>
-            <div>
-                <h2>Contato</h2>
-                <br />
-
-            </div>
-        </section>
+        <iframe width="100%" height="600" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1228.9004822725694!2d-52.20016422428938!3d-28.44325087528856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94e29cb02c100001%3A0xd668363678bc7bbe!2sEd.%20Gaia%20-%20Av.%20Julio%20Borella%2C%20630%20-%20Sala%20203%20-%20Centro%2C%20Marau%20-%20RS%2C%2099150-000!5e0!3m2!1spt-BR!2sbr!4v1705609172896!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            
         <footer>
-            <div>
-                <p>© 2024 · Todos os direitos reservados</p>
-            </div>
+            <section>
+                <div>
+                    <img src="/img/footer-logo-small-branca.png" width="130px" width="103px" alt="Dr Eduardo Vanin Rodrigues - Logo">
+                    <br /><br />
+                    <h3>OAB: 133074</h3>
+                    <br />
+                    <h3>Contato</h3>
+                    <br />
+                    
+
+                    <p>Whatsapp: (54) 9 9700-7379</p>
+                    <br />
+
+                    <p>E-mail: contato@eduardovrodrigues.com.br</p>
+                </div>
+                <div>
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="/">Início</a>
+                            </li>
+                            <li>
+                                <a href="#servicos">Serviços</a>
+                            </li>
+                            <li>
+                                <a href="#sobre">Sobre</a>
+                            </li>
+                            <li>
+                                <a href="#contato">Contato</a>
+                            </li>
+                            <li>
+                                <a href="#contato">Termos de uso</a>
+                            </li>
+                            </li>
+                            <li>
+                                <a href="#contato">Políticas de Privacidade</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div>
+                    <h3>Onde estamos</h3>
+                    <br />
+                    <address>Av. Julio Borella, 630 - Sala 203 - Centro,<br /> Marau - RS, 99150-000</address>
+                    <br />
+                    <h3>Horário de atendimento</h3>
+                    <br />
+                    <h4>Segunda a sexta</h4>
+                    <br />
+                    <p><time datetime="08:00">8h</time> às <time datetime="18:00">18h</time></p>
+                    <br />
+                    <h4>Sábado</h4>
+                    <br />
+                    
+                    <p><time datetime="08:00">8h</time> às <time datetime="12:00">12h</time></p>
+                </div>
+                <div>
+                    <iframe width="470px" height="350px" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3231.1137605720205!2d-52.20205623844899!3d-28.442564527284425!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94e29d114908cf5f%3A0x9ad800a9929bcb5e!2sEduardo%20Vanin%20Rodrigues%20-%20Advogado%20Criminalista!5e0!3m2!1spt-PT!2sbr!4v1706231850375!5m2!1spt-PT!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </section>
+            <hr />
+            <p>
+                eduardovrodrigues.com.br · 2024 | Todos os direitos reservados
+                <br />
+                <br />
+
+                <a href="https://www.facebook.com/profile.php?id=61550965868564" target="_blank">
+                    <img src="/img/Facebook_Logo_Primary.png" width="30px" height="30px" alt="Facebook - Rede social do Dr Eduardo Vanin Rodrigues">
+                </a><a href="https://www.instagram.com/evrodrigues.adv/" target="_blank">
+                    <img src="/img/instagram.png" width="30px" height="30px" alt="Instagram - Rede social do Dr Eduardo Vanin Rodrigues">
+                </a><a href="https://web.whatsapp.com/send?phone=555497007379" target="_blank">
+                    <img src="/img/whatsapp.png" width="30px" height="30px" alt="Whatsapp - Rede social do Dr Eduardo Vanin Rodrigues">
+                </a>
+                
+            </p>
         </footer>
     </body>
 </html>
+</script>
