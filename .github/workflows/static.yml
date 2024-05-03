@@ -36,6 +36,9 @@ jobs:
       - name: Redirect www to no-www
         run: |
           echo '<meta http-equiv="refresh" content="0; url=https://eduardovrodrigues.adv.br/" />' > src/index.html
+      - name: Redirect HTTP to HTTPS
+        run: |
+          echo '<meta http-equiv="refresh" content="0; url=https://eduardovrodrigues.adv.br$GITHUB_REPOSITORY" />' > src/.htaccess
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
