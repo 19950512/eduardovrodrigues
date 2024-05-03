@@ -38,6 +38,9 @@ jobs:
         with:
           # Upload entire repository
           path: './src'
+      - name: Add 404 page
+        run: |
+          echo "<html><body><h1>404 - Not Found</h1></body></html>" > src/404.html
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
