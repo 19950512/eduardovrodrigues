@@ -197,6 +197,9 @@ footer > p:last-child a {
 footer > p:last-child a:hover {
     filter: grayscale(0);
 }
+iframe {
+    width: 100%;
+}
 
 
 @media screen and (max-width: 768px) {
