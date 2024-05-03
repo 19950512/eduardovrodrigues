@@ -135,7 +135,6 @@
                 /* Sessao nossos serviços*/
                 section:nth-child(3) {
                     background-color: #fff;
-                    min-height: 100vh;
                 }
                 /* Sessão Sobre*/
                 section:nth-child(4) {
@@ -205,6 +204,7 @@
 
                 footer > p:last-child a {
                     filter: grayscale(.5);
+                    text-decoration: none;
                 }
                 footer > p:last-child a:hover {
                     filter: grayscale(0);
@@ -212,6 +212,19 @@
 
 
                 @media screen and (max-width: 768px) {
+
+                    * {
+                        line-height: 1.5rem;
+                    }
+
+                    section{
+                        padding: 5rem 1rem;
+                    }
+                    section div {
+                        margin: 0;
+                        height: 30vh;
+                        min-height: 330px;
+                    }
 
                     h1 {
                         font-size: 1.5rem;
@@ -229,6 +242,16 @@
 
                     section{
                         padding: 10rem 1rem;
+                    }
+
+                    footer iframe {
+                        width: 100%;
+                    }
+                    footer section{
+                        flex-direction: column;
+                    }
+                    footer section nav ul {
+                        gap: 17px;
                     }
                 }
 
