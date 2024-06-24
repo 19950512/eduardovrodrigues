@@ -48,7 +48,7 @@ header div {
     align-items: start;
     max-width: 85rem;
     color: white;
-    height: 330px;
+    height: 220px;
     width: 100%;
 }
 
@@ -62,7 +62,51 @@ header button {
     font-size: 14px;
     font-weight: 500;
     cursor: pointer;
+}
 
+.btn-whatsapp{
+
+    background-color: #25d366;
+    color: rgb(36, 36, 36);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+@keyframes pulsar {
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 50px rgba(0, 175, 83, 0);
+    }
+    100% {
+        transform: scale(0.9);
+        box-shadow: 0 0 0 0 rgba(0, 175, 83, 0);
+    }
+}
+.pulse-button{
+    position: fixed;
+    bottom: 20px;
+    right: 50px;
+    margin-left: -50px;
+    margin-top: -50px;
+    display: block;
+    width: 70px;
+    height: 70px;
+    font-size: 1.3em;
+    font-weight: light;
+    text-align: center;
+    line-height: 80px;
+    letter-spacing: -1px;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    background: #00af53;
+    cursor: pointer;
+    box-shadow: 0 0 0 0 rgba(0, 175, 83, 0.5);
+    -webkit-animation: pulsar 1.5s infinite;
 }
 
 nav {
@@ -104,7 +148,6 @@ section div {
     align-items: flex-start;
     max-width: 85rem;
     margin: auto;
-    height: 40vh;
     min-height: 380px;
 }
 section div p:last-child {
@@ -121,8 +164,11 @@ section div {
 
 
 /* Sessao nossos serviços*/
-section:nth-child(3) {
-    background-color: #fff;
+#servicos {
+    background-color: #3a3a3a;
+}
+#servicos h2 {
+color: white;
 }
 /* Sessão Sobre*/
 section:nth-child(4) {
@@ -196,9 +242,16 @@ footer > p:last-child a {
 }
 footer > p:last-child a:hover {
     filter: grayscale(0);
+
 }
 iframe {
     width: 100%;
+}
+
+ul li{
+    font-size: 1.1em;
+    font-weight: 400;
+    list-style: square;
 }
 
 
