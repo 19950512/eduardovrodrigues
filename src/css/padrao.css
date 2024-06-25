@@ -75,6 +75,7 @@ header button {
     cursor: pointer;
 
     transition: all 0.3s;
+    z-index: 999999999999;
 }
 .btn-whatsapp:hover{
     scale: 1.1;
@@ -111,6 +112,7 @@ header button {
     cursor: pointer;
     box-shadow: 0 0 0 0 rgba(0, 175, 83, 0.5);
     -webkit-animation: pulsar 1.5s infinite;
+    z-index: 999999999999;
 }
 
 nav {
@@ -124,6 +126,7 @@ nav ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 15px;
 }
 
 nav ul li {
@@ -289,19 +292,26 @@ ul li{
     padding:45px 50px;
 }
 
-
+.container-flex{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-between;
+}
 @media screen and (max-width: 768px) {
 
     * {
         line-height: 1.5rem;
     }
 
+    .container-flex{
+        flex-direction: column;
+    }
     section{
         padding: 5rem 1rem;
     }
     section div {
         margin: 0;
-        height: 30vh;
         min-height: 330px;
     }
 
@@ -315,12 +325,16 @@ ul li{
         height: 9.5rem;
         padding-left: 1rem;
     }
+    #textsobre{
+        width: 90%;
+        left: 5%;
+    }
     header button {
         margin: 14px 0;
     }
 
     section{
-        padding: 10rem 1rem;
+        padding: 5rem 1rem;
     }
 
     footer iframe {
