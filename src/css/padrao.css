@@ -347,4 +347,12 @@ ul li{
     footer section nav ul {
         gap: 17px;
     }
+
+
+    section:nth-child(4) {
+        background-color: #9b9b9b;
+        min-height: 100vh;
+        background-image: url('/img/eduardo-header.png'), url('/img/sobre-background.jpg');
+        background-position: bottom right, center;
+    }
 }
