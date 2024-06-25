@@ -324,6 +324,7 @@ ul li{
     header div {
         height: 9.5rem;
         padding-left: 1rem;
+        grid-template-columns: 1.4fr 1fr;
     }
     #textsobre{
         width: 90%;
