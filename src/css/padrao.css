@@ -157,9 +157,6 @@ section div {
     margin: auto;
     min-height: 380px;
 }
-section div p:last-child {
-    font-size: 14px;
-}
 
 /* Reset do H1 para os demais sections*/
 section {
