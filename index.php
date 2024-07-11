@@ -11,6 +11,8 @@ foreach($estados['estados'] as $estado){
 
     $cidades = $estado['cidades'];
 
+    $urlsSiteMap = [];
+
     foreach($cidades as $cidade){
 
         $url = iconv('UTF-8', 'ASCII//TRANSLIT', mb_strtolower($cidade.'-'.$uf));
@@ -33,6 +35,18 @@ foreach($estados['estados'] as $estado){
             continue;
         }
 
+        $urlsSiteMap[] = '
+<url>
+    <loc>https://eduardovrodrigues.adv.br/'.$url.'</loc>
+    <lastmod>'.date('Y-m-d H:i:s').'</lastmod>
+    <priority>0.80</priority>
+</url>';
+
         file_put_contents(__DIR__.'/src/'.$url.'.html', $conteudo);
     }
 }
+
+$sitemal = file_get_contents(__DIR__.'/src/sitemap.xml');
+$sitemal = str_replace('{{urls}}', implode('', $urlsSiteMap), $sitemal);
+
+file_put_contents(__DIR__.'/src/sitemap.xml', $sitemal);
