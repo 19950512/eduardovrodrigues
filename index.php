@@ -38,7 +38,7 @@ foreach($estados['estados'] as $estado){
         $urlsSiteMap[] = '
 <url>
     <loc>https://eduardovrodrigues.adv.br/'.$url.'</loc>
-    <lastmod>'.date('Y-m-d H:i:s').'</lastmod>
+    <lastmod>'.date('Y-m-d').'T01:48:30+00:00</lastmod>
     <priority>0.80</priority>
 </url>';
 
