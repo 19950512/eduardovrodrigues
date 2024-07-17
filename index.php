@@ -25,7 +25,8 @@ foreach($estados['estados'] as $estado){
         $mustache = [
             '{{title}}' => $title,
             '{{cidade}}' => $cidade,
-            '{{uf}}' => mb_strtoupper($uf)
+            '{{uf}}' => mb_strtoupper($uf),
+            '{{url_link}}' => $url,
         ];
 
         $conteudo = str_replace(array_keys($mustache), array_values($mustache), $conteudoMascara);
