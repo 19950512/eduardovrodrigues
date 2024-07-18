@@ -260,7 +260,47 @@
                 <br >
                 <br >
                 <br >
-                <div class="container-flex">
+                <style>
+                    .container-grid{
+                        display: grid;
+                        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                        gap: 40px;
+                        justify-content: stretch;
+                        padding: 20px;
+                    }
+                    .container-grid div{
+                        width: 100%;
+                        height: 100%;
+                        min-height: auto;
+                    }
+
+                    /*
+                        Preciso que seja apresentado 1 card no mobile pequeno, 2 cards no mobile médio, 3 cards no tablet e 4 cards no desktop
+                    */
+                    @media (max-width: 1024px){
+                        .container-grid{
+                            padding: 0;
+                        }
+                    }
+                    @media (max-width: 600px){
+                        .container-grid{
+                            grid-template-columns: 1fr;
+                        }
+                    }
+                    @media (min-width: 601px) and (max-width: 1024px){
+                        .container-grid{
+                            grid-template-columns: 1fr 1fr;
+                        }
+                    }
+                    @media (min-width: 1025px){
+                        .container-grid{
+                            grid-template-columns: 1fr 1fr 1fr;
+                        }
+                    }
+                    
+                    
+                </style>
+                <div class="container-grid">
                     <div>
                         <div class="card_servico">
                             <span style="display: block; width: 40px; height: 40px; text-align:center; margin: auto;">
@@ -311,11 +351,6 @@
                             </ul>
                         </div>
                     </div>
-                </div>
-
-                <br>
-
-                <div class="container-flex">
                     <div>
                         <div class="card_servico">
                             <span style="display: block; width: 40px; height: 40px; text-align:center; margin: auto;">
