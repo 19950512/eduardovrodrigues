@@ -235,6 +235,7 @@
                         <li><a href="#servicos">Serviços</a></li>
                         <li><a href="#sobre">Sobre</a></li>
                         <li><a href="#contato">Contato</a></li>
+                        <li><a href="#blog">Blog</a></li>
                     </ul>
                 </nav>
             </div>
@@ -253,6 +254,115 @@
                 <p><button onclick="window.open(`https://api.whatsapp.com/send?phone=555497007379&text=Olá! Vim através do site e gostaria de saber mais. Podemos conversar?`, 'whatsapp')">Entre em contato</button></p>
             </div>
         </header>
+        <section id="blog">
+            <div>
+                <h2 style="text-align: center; width: 100%; font-size: 2rem; margin-bottom: 20px;">Posts Recentes</h2>
+        
+                <div id="posts-container" class="posts-container"></div> <!-- Onde os posts serão exibidos -->
+        
+                <script>
+                    // Função para buscar posts da API REST do WordPress
+                   async function fetchPosts() {
+                        const response = await fetch('https://blog.eduardovrodrigues.adv.br/wp-json/wp/v2/posts?per_page=5');
+                        const posts = await response.json();
+                        
+                        const postsContainer = document.getElementById('posts-container');
+
+                        posts.forEach(async (post) => {
+                            const postElement = document.createElement('div');
+                            postElement.classList.add('post');
+
+                            const postLink = document.createElement('a');
+                            postLink.href = post.link;
+                            postLink.target = "_blank";  // Abre em uma nova aba
+                            postLink.classList.add('post-link');
+
+                            // Pegar a imagem destacada
+                            const imageId = post.featured_media; 
+
+                            if (imageId) {
+                                const imageResponse = await fetch(`https://blog.eduardovrodrigues.adv.br/wp-json/wp/v2/media/${imageId}`);
+                                const imageData = await imageResponse.json();
+
+                                const postThumbnail = document.createElement('img');
+                                postThumbnail.classList.add('post-thumbnail');
+                                
+                                // Aqui você pode escolher qual tamanho da imagem quer mostrar
+                                postThumbnail.src = imageData.media_details.sizes.medium.source_url; // Usando a miniatura (300x170)
+                                postThumbnail.alt = `Imagem destacada do post ${post.title.rendered}`;
+
+                                postLink.appendChild(postThumbnail);
+                            }
+
+                            const postTitle = document.createElement('h3');
+                            postTitle.innerHTML = post.title.rendered;
+                            postTitle.style.textAlign = "center";
+
+                            const postExcerpt = document.createElement('p');
+                            postExcerpt.innerHTML = post.excerpt.rendered;
+
+                            postLink.appendChild(postTitle);
+                            postLink.appendChild(postExcerpt);
+
+                            postElement.appendChild(postLink);
+                            postsContainer.appendChild(postElement);
+                        });
+                    }
+
+                    window.onload = fetchPosts;
+                </script>
+        
+                <style>
+                    .posts-container {
+                        display: grid;
+                        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                        gap: 20px;
+                        margin-top: 20px;
+                    }
+        
+                    .post {
+                        background: #f9f9f9;
+                        border-radius: 10px;
+                        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+                        overflow: hidden;
+                        transition: transform 0.3s ease;
+                        max-width: 350px;
+                        margin: 0 auto;
+                    }
+        
+                    .post:hover {
+                        transform: translateY(-5px);
+                    }
+        
+                    .post-link {
+                        text-decoration: none;
+                        color: inherit;
+                        display: block;
+                        padding: 15px;
+                    }
+        
+                    .post-thumbnail {
+                        width: 100%;
+                        height: 200px;
+                        object-fit: cover;
+                        border-bottom: 1px solid #ddd;
+                    }
+        
+                    .post h3 {
+                        color: #570f0d;
+                        font-size: 1.5rem;
+                        margin-top: 10px;
+                        margin-bottom: 10px;
+                    }
+        
+                    .post p {
+                        font-size: 1rem;
+                        color: #333;
+                        margin-bottom: 15px;
+                    }
+                </style>
+            </div>
+        </section>
         <section id="servicos">
             <div>
                 <h2 style="text-align: center; width: 100%">Serviços disponíveis</h2>
