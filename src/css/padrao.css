@@ -61,6 +61,9 @@ header button {
     font-size: 14px;
     font-weight: 500;
     cursor: pointer;
+    /* Animação de pulsar */
+    box-shadow: 0 0 0 0 rgba(0, 175, 83, 0.5);
+    -webkit-animation: pulsar 1.5s infinite;
 }
 
 .btn-whatsapp{
